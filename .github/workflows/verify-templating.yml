@@ -19,4 +19,4 @@ jobs:
       - name: Check Git Status
         run: |
           status="$(git status --short)"
-          [ -z "$status" ]
+          [ -z "$status" ] || echo "There are uncommitted changes"
